@@ -104,3 +104,44 @@ $(function()
 {
     new WOW().init();
 });
+
+// STATS COUNTER ANIMATION
+$(function() {
+    var counted = false;
+    function animateCounters() {
+        if (counted) return;
+        var statsSection = document.getElementById('stats');
+        if (!statsSection) return;
+        var rect = statsSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            counted = true;
+            $('.stat-number').each(function() {
+                var $this = $(this);
+                var target = parseInt($this.attr('data-target'));
+                $({ count: 0 }).animate({ count: target }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.floor(this.count));
+                    },
+                    complete: function() {
+                        $this.text(target + '+');
+                    }
+                });
+            });
+        }
+    }
+    $(window).on('scroll', animateCounters);
+    animateCounters();
+});
+
+// SCROLL TO TOP BUTTON
+$(function() {
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 400) {
+            $('#scrollTop').addClass('visible');
+        } else {
+            $('#scrollTop').removeClass('visible');
+        }
+    });
+});
