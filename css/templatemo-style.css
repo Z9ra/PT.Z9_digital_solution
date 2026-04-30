@@ -192,13 +192,32 @@ a:hover {
 
 /* home section */
 .tm-home {
-  background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1920') no-repeat center center;
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1920') no-repeat center center;
   background-size: cover;
-  color: #ffffff;
+  color: #202020;
   text-align: center;
   vertical-align: middle;
   padding-top: 120px;
   padding-bottom: 150px;
+  position: relative;
+}
+
+.tm-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+.tm-home>.container {
+  position: relative;
+  z-index: 1;
 }
 
 .tm-home-logo {
