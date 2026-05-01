@@ -525,7 +525,7 @@
 						<li>Aplikasi Kasir (POS)</li>
 					</ul>
 					<a href="https://wa.me/6282127772205?text=Halo%20Z9%20Digital%20Solutions%2C%20saya%20tertarik%20dengan%20layanan%20Anda"
-						class="btn btn-warning" target="_blank">Hubungi Kami</a>
+						class="btn btn-warning" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
@@ -538,7 +538,7 @@
 						<li>Konfigurasi Router &amp; Firewall</li>
 					</ul>
 					<a href="https://wa.me/6282127772205?text=Halo%20Z9%20Digital%20Solutions%2C%20saya%20tertarik%20dengan%20layanan%20Anda"
-						class="btn btn-warning" target="_blank">Hubungi Kami</a>
+						class="btn btn-warning" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
@@ -551,7 +551,7 @@
 						<li>Instalasi &amp; Setup OS</li>
 					</ul>
 					<a href="https://wa.me/6282127772205?text=Halo%20Z9%20Digital%20Solutions%2C%20saya%20tertarik%20dengan%20layanan%20Anda"
-						class="btn btn-warning" target="_blank">Hubungi Kami</a>
+						class="btn btn-warning" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
 				</div>
 			</div>
 		</div>
@@ -585,6 +585,10 @@
 				</div>
 				<div class="col-md-8 col-sm-7 contact-form wow fadeInRight" data-wow-delay="0.9s">
 					<form action="https://formspree.io/f/your-form-id" method="post" role="form">
+						<!-- Honeypot Spam Protection -->
+						<label class="sr-only">Biarkan kosong jika Anda manusia: <input type="text" name="_gotcha"
+								tabindex="-1" autocomplete="off"></label>
+
 						<div class="col-md-6 col-sm-6">
 							<label for="contact-name" class="sr-only">Nama Anda</label>
 							<input id="contact-name" name="name" class="form-control" type="text"
@@ -653,7 +657,7 @@
 						<li><a href="#" class="fa fa-facebook" aria-label="Facebook"></a></li>
 						<li><a href="#" class="fa fa-instagram" aria-label="Instagram"></a></li>
 						<li><a href="https://wa.me/6282127772205" class="fa fa-whatsapp" aria-label="WhatsApp"
-								target="_blank"></a></li>
+								target="_blank" rel="noopener noreferrer"></a></li>
 						<li><a href="#" class="fa fa-linkedin" aria-label="LinkedIn"></a></li>
 					</ul>
 				</div>
@@ -668,7 +672,8 @@
 	</footer>
 
 	<!-- WhatsApp Floating Button -->
-	<a href="https://wa.me/6282127772205" class="whatsapp-float" target="_blank" aria-label="Chat via WhatsApp">
+	<a href="https://wa.me/6282127772205" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+		aria-label="Chat via WhatsApp">
 		<i class="fa fa-whatsapp"></i>
 	</a>
 
@@ -678,7 +683,8 @@
 	</a>
 
 	<!-- javascript js here -->
-	<script src="js/jquery.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/smoothscroll.js"></script>
 	<script src="js/jquery.nav.js"></script>

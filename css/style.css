@@ -232,7 +232,10 @@ a:hover {
 }
 
 .tm-home-logo {
-  -webkit-text-fill-color: linear-gradient(to bottom right, #0A2347, #26BCFF);
+  background: linear-gradient(to bottom right, #0A2347, #26BCFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 64px;
   color: #0A2347;
 }
@@ -260,7 +263,8 @@ a:hover {
 }
 
 .tm-home .btn:hover {
-  background: #0A2347;
+  background: var(--primary);
+  color: var(--white);
 }
 
 /* social icons section */
@@ -327,13 +331,12 @@ a:hover {
 }
 
 .tm-about .about-des {
-  background: #ffffff;
-  -webkit-box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
-  box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
-  border-right: 4px solid #0A2347;
+  background: var(--white);
+  -webkit-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+  border-right: 4px solid var(--primary);
   padding: 60px;
-  position: relative;
-  top: 70px;
+  margin-top: 70px;
 }
 
 .tm-about-h3 {
@@ -341,13 +344,13 @@ a:hover {
 }
 
 .tm-about .about-bottom-des {
-  background: #ffffff;
+  background: var(--white);
   -webkit-box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.08);
   box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.08);
-  border-left: 4px solid #0A2347;
+  border-left: 4px solid var(--primary);
   padding: 40px 20px 40px 20px;
-  position: relative;
-  top: 140px;
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
 
 .tm-about .about-skills {
@@ -447,23 +450,11 @@ a:hover {
 }
 
 .tm-service .border-right {
-  border-right: 1px solid #f9f9f9;
+  border-right: 1px solid var(--light);
 }
 
 .tm-service .border-bottom {
-  border-bottom: 1px solid #f9f9f9;
-}
-
-.tm-service .fa {
-  border-right: 2px solid #0A2347;
-  border-left: 2px solid #202020;
-  border-radius: 50%;
-  font-size: 30px;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  text-align: center;
-  margin-top: 40px;
+  border-bottom: 1px solid var(--light);
 }
 
 .tm-service-h3 {
@@ -764,8 +755,7 @@ a:hover {
 
 .tm-contact .contact-form {
   padding-bottom: 40px;
-  position: relative;
-  bottom: 40px;
+  padding-top: 20px;
 }
 
 .tm-contact-h3 {
@@ -1077,7 +1067,7 @@ footer .footer-bottom hr {
 }
 
 footer .footer-bottom p {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 13px;
   margin: 0;
 }
@@ -1188,12 +1178,29 @@ footer img {
     padding-left: 5px;
   }
 
+  h2 {
+    font-size: 28px;
+  }
+
+  .tm-home-logo {
+    font-size: 40px;
+  }
+
   .tm-home-header {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .stat-item .stat-number {
     font-size: 36px;
+  }
+
+  .tm-about .about-des {
+    margin-top: 30px;
+    padding: 30px;
+  }
+
+  .tm-about .about-bottom-des {
+    margin-top: 40px;
   }
 
   footer .footer-heading::after {
@@ -1230,7 +1237,7 @@ footer img {
   }
 
   .tm-contact .contact-form {
-    padding-top: 140px;
+    padding-top: 20px;
   }
 
   .whatsapp-float {
@@ -1245,5 +1252,9 @@ footer img {
   .scroll-top {
     right: 80px;
     bottom: 20px;
+  }
+
+  .mainLogo {
+    width: 140px;
   }
 }

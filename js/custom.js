@@ -1,19 +1,21 @@
 
 // PRELOADER
-	jQuery(window).load(function() {
+	jQuery(window).on('load', function() {
         // will first fade out the loading animation
 	jQuery(".sk-spinner").fadeOut();
         // will fade out the whole DIV that covers the website.
 	jQuery(".preloader").delay(1000).fadeOut("slow");
 });
 
-// NIVO LIGHTBOX
-$('.iso-box-section a').nivoLightbox({
-        effect: 'fadeScale',
-    });
+// NIVO LIGHTBOX (initialized inside document.ready below)
 
 // ISOTOPE FILTER
 jQuery(document).ready(function($){
+
+	// Initialize Nivo Lightbox after DOM is ready
+	$('.iso-box-section a').nivoLightbox({
+		effect: 'fadeScale',
+	});
 
 	if ( $('.iso-box-wrapper').length > 0 ) { 
 
@@ -27,8 +29,8 @@ jQuery(document).ready(function($){
 				itemSelector: '.iso-box'
 	    	});
 
-	    	$imgs.load(function(){
-	    		$container.isotope('reLayout');
+	    	$imgs.on('load', function(){
+	    		$container.isotope('layout');
 	    	})
 
 	    });
@@ -115,6 +117,7 @@ $(function() {
         var rect = statsSection.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
             counted = true;
+            $(window).off('scroll', animateCounters);
             $('.stat-number').each(function() {
                 var $this = $(this);
                 var target = parseInt($this.attr('data-target'));
